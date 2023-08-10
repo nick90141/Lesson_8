@@ -30,11 +30,13 @@ public class Monitor extends Device {
 
     @Override
     public String toString () {
+        super.toString ();
         return "Monitor: manufacturer = " + manufacturer + ", price = " + price + ", serialNumber = " + serialNumber + ", X = " + resolutionX + ", Y = " + resolutionY;
     }
 
     @Override
     public boolean equals(Object o) {
+        super.equals (o);
         if (this == o) return true;
         if (!(o instanceof Monitor monitor)) return false;
         return getResolutionX() == monitor.getResolutionX() && getResolutionY() == monitor.getResolutionY();
@@ -42,6 +44,7 @@ public class Monitor extends Device {
 
     @Override
     public int hashCode() {
+        super.hashCode();
         return Objects.hash(getResolutionX(), getResolutionY());
     }
 }

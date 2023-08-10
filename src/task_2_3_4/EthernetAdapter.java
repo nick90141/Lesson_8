@@ -29,10 +29,12 @@ public class EthernetAdapter extends Device {
     }
     @Override
     public String toString() {
+        super.toString ();
         return super.toString() + ", speed=" + speed + ", mac=" + mac;
     }
     @Override
     public boolean equals(Object o) {
+        super.equals (o);
         if (this == o) return true;
         if (!(o instanceof EthernetAdapter that)) return false;
         if (!super.equals(o)) return false;
@@ -41,6 +43,7 @@ public class EthernetAdapter extends Device {
 
     @Override
     public int hashCode() {
+        super.hashCode();
         return Objects.hash(super.hashCode(), getSpeed(), getMac());
     }
 }
